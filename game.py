@@ -22,7 +22,7 @@ class Game:
                 if play_game_tag not in ['yes', 'no']:
                     print('That is not a valid option.')
                 elif play_game_tag == 'no':
-                    print('Goodbye!')
+                    print(f'You left the game with ${self.player.balance}.')
                     return
                 else:
                     break
