@@ -12,8 +12,9 @@ class Hand:
                 value += 11
             else:
                 value += int(card_value)
-        if value > 21 and 'A' in card_values:
-            value -= 10
+        for card_value in card_values:
+            if value > 21 and card_value == 'A':
+                value -= 10
         return value
         
     def add_to_hand(self, deck, num_cards):
