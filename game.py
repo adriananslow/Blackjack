@@ -19,9 +19,9 @@ class Game:
 
             while True:
                 play_game_tag = input(f'You are starting with ${self.player.balance}. Would you like to play a hand? ').lower()
-                if play_game_tag not in ['yes', 'no']:
+                if play_game_tag not in ['yes', 'y', 'no', 'n']:
                     print('That is not a valid option.')
-                elif play_game_tag == 'no':
+                elif play_game_tag in ['no', 'n']:
                     print(f'You left the game with ${self.player.balance}.')
                     return
                 else:
